@@ -22,7 +22,7 @@ function Todo_list() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const filtered = state.filter((value) =>
-    value.ism.includes(search.toLowerCase())
+    value.ism.toLowerCase().includes(search.toLowerCase())
   );
   return (
     <div className="mt-5">
@@ -45,7 +45,7 @@ function Todo_list() {
             onChange={(e) => setText(e.target.value)}
             placeholder="so'z kiriting"
             value={text}
-            className="w-full p-[10px] text-[16px] bg-blue-200 border-[2px] border-[solid] border-[#ddd] rounded-[5px] outline-[none]"
+            className="w-full p-[10px] text-black text-[16px] bg-blue-200 border-[2px] border-[solid] border-[#ddd] rounded-[5px] outline-[none]"
             type="text"
           />
           <button
@@ -95,6 +95,7 @@ function Todo_list() {
                         setEdit(value.id); 
                         setText(value.ism);
                         
+
                     }}
                     >
                     Edit
