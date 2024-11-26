@@ -95,7 +95,6 @@ function Todo_list() {
                         setEdit(value.id); 
                         setText(value.ism);
                         
-                        
                     }}
                     >
                     Edit

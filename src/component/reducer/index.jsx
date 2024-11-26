@@ -16,7 +16,7 @@ function Reducer() {
   };
   const [state, dispatch] = useReducer(reducer, { counter: 0 });
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center flex-col">
       <button onClick={() => dispatch({ type: "qo'shish" })}>+</button>
       <p>{state.counter}</p>
       <button onClick={() => dispatch({ type: "ayirish" })}>-</button>

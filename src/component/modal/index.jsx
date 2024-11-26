@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import App2 from "../../app";
+import { Link } from "react-router-dom";
+import Todo_list from "../../root/todolist";
 
 function Modal() {
+
   const [isopen, setisOpen] = useState(false);
 
   const [toggleOpen , SetToggle] = useState(false)
@@ -12,8 +15,8 @@ function Modal() {
   const CloseModal = () => setisOpen(false);
 
   return (
-    <div>
-      <div>
+    <div className="flex flex-col">
+      <div className="flex flex-col">
         <button onClick={Modaltoggle}>
           {toggleOpen ? "Yopish" : "Ochish"}
         </button>
@@ -22,7 +25,7 @@ function Modal() {
             bu toggle modal
           </div>
         )}
-        <div>
+        <div className="flex flex-col">
           <button onClick={OpenModal}>Open</button>
           {isopen && (
             <div className="w-[100px] h-[100px] bg-green">
@@ -32,6 +35,8 @@ function Modal() {
           )}
         </div>
         <App2 />
+      </div>
+      <div className="mt-[10vh]">
       </div>
     </div>
   );
