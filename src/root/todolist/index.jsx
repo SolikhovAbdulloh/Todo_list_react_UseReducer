@@ -50,7 +50,7 @@ function Todo_list() {
           />
           <button
             onClick={() => {
-              if (text.trim()) {
+              if (text) {
                 dispatch({ type: "Add", text });
                 setText("");
               }
